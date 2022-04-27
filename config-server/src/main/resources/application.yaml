@@ -1,12 +1,12 @@
 server:
-  port: 8081
+  port: 8084
 spring:
   cloud:
     config:
       server:
         git:
           default-label: config-server
-          uri: https://github.com/ChristianRaulRamirez/microservicios-tutorial
+          uri: https://github.com/is-lgarcia/microservices-example
           search-paths: config-data
   application:
-    name: config-server
+    name: config-service
