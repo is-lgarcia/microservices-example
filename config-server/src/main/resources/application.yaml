@@ -5,7 +5,7 @@ spring:
     config:
       server:
         git:
-          default-label: multiplies-instances
+          default-label: gateway-service
           uri: https://github.com/is-lgarcia/microservices-example
           search-paths: config-data
   application:
