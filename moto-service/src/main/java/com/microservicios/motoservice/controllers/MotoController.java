@@ -10,7 +10,7 @@ import java.util.List;
 
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("/motos")
+@RequestMapping("/moto")
 public class MotoController {
 
     private final MotoService motoService;

@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.List;
 
-@FeignClient(name = "cars", url = "http://localhost:8082/")
+@FeignClient(name = "car-service")
 public interface CarFeignClient{
 
-    @RequestMapping(method = RequestMethod.POST, value = "/cars", consumes = "application/json")
+    @RequestMapping(method = RequestMethod.POST, value = "/car", consumes = "application/json")
     Car save(Car car);
 
-    @GetMapping("/cars/users/{userId}")
+    @GetMapping("/car/users/{userId}")
     List<Car> getCars(@PathVariable Integer userId);
 }

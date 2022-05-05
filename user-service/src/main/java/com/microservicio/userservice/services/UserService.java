@@ -28,8 +28,7 @@ public class UserService {
     }
 
     public List<Car> getCarByUserId(Integer userId){
-        List<Car> cars = restTemplate.getForObject("http://localhost:8082/cars/users/" + userId, List.class);
-        return cars;
+        return carFeignClient.getCars(userId);
     }
 
     public Car saveCar(Integer userId, Car car){
@@ -38,8 +37,7 @@ public class UserService {
     }
 
     public List<Moto> getMotoByUserId(Integer userId){
-        List<Moto> motos = restTemplate.getForObject("http://localhost:8083/motos/users/" + userId, List.class);
-        return motos;
+        return motoFeignClient.getMotos(userId);
     }
 
     public Moto saveMoto(Integer userId, Moto moto){
